@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Data Storage Converter</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Data Storage Converter</h1>
-        <div class="input-group">
-            <input type="number" id="inputValue" placeholder="Enter value">
-            <select id="inputUnit">
-                <option value="bytes">Bytes</option>
-                <option value="kilobytes">Kilobytes</option>
-                <option value="megabytes">Megabytes</option>
-                <option value="gigabytes">Gigabytes</option>
-            </select>
-        </div>
-        <button id="convertButton">Convert</button>
-        <div class="result">
-            <p id="output"></p>
-        </div>
+    <h1>Data Storage Converter</h1>
+    <div class="converter">
+        <input type="number" id="input" placeholder="Enter Value">
+        <select id="from">
+            <option value="KB">Kilobytes (KB)</option>
+            <option value="MB">Megabytes (MB)</option>
+            <option value="GB">Gigabytes (GB)</option>
+            <option value="TB">Terabytes (TB)</option>
+        </select>
+        <span>to</span>
+        <select id="to">
+            <option value="KB">Kilobytes (KB)</option>
+            <option value="MB">Megabytes (MB)</option>
+            <option value="GB">Gigabytes (GB)</option>
+            <option value="TB">Terabytes (TB)</option>
+        </select>
+        <button onclick="convert()">Convert</button>
+        <p id="result"></p>
     </div>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
